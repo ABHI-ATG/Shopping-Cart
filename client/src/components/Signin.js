@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {toast,ToastContainer} from 'react-toastify';
 import axios from 'axios'
+import url from './url'
 
 const Signin=()=>{
     const navigate=useNavigate();
@@ -28,7 +29,7 @@ const Signin=()=>{
             },1000)
             return;
         }
-        const data=await axios.post('http://localhost:5000/api/client/login',{
+        const data=await axios.post(`${url}api/client/login`,{
           email:email,password:password
         },{
           headers:{
@@ -85,7 +86,7 @@ const Signin=()=>{
       e.preventDefault()
       setIsLoading(true)
       try {
-        const data=await axios.post('http://localhost:5000/api/client/login',{
+        const data=await axios.post(`${url}/api/client/login`,{
           email:"guest@gmail.com",password:"guest"
         },{
           headers:{

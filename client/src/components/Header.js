@@ -9,7 +9,7 @@ import {AiOutlineShoppingCart} from 'react-icons/ai'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import {toast,ToastContainer} from 'react-toastify';
-
+import url from './url'
 
 function Header() {
   const navigate=useNavigate();
@@ -17,7 +17,7 @@ function Header() {
 
   const logout=async()=>{
     try{
-        const res=await axios.get('http://localhost:5000/api/client/logout',{headers:{
+        const res=await axios.get(`${url}/api/client/logout`,{headers:{
           "Authorization":localStorage.getItem('token'),
           "Content-Type":"application/json",
           "Accept":"application/json"

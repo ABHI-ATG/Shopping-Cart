@@ -2,11 +2,9 @@ import {   useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios'
 import {toast,ToastContainer} from 'react-toastify';
-
+import url from './url'
 
 const Signup=()=>{
-
-  
 
     const navigate=useNavigate();
     const [user,setUser]=useState({
@@ -37,7 +35,7 @@ const Signup=()=>{
       }
 
       try {
-        const res=await axios.post('http://localhost:5000/api/client/register',{
+        const res=await axios.post(`${url}/api/client/register`,{
           name,email,password
         },{headers:{
           "Content-Type":"application/json"
