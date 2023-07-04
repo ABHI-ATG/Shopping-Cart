@@ -1,0 +1,256 @@
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout{
+    cursor: pointer;
+}
+
+/* home */
+.home{
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+.topHome{
+    margin: 15px;
+}
+.topHome button{
+    width: 100px;
+    background-color: blue;
+    border-radius: 0px;
+    margin: 10px;
+}
+
+.home::before{
+    content: "";
+    background: url('./components/1.jpg');
+    height: 110%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 55%;
+}
+
+/* particle */
+.particle{
+    z-index: -1;
+}
+
+/* signin */
+.form-group{
+    margin: 10px;
+
+}
+
+
+
+/* contain */
+.contain{
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* customize */
+.search{
+    width: 25%;
+    background-color: #08084b;
+    margin: 7px 10px;
+    padding: 30px 5px 40px 5px;
+    color: white;
+    flex-direction: column;
+}
+
+.clabel{
+    flex-direction: column;
+    margin: 5px 10px;
+    width: 100%;
+    width: 80%;
+    align-items: flex-start;
+}
+.clabel p{
+    margin: 0;
+}
+.clabel input, .clabel select,.clabel div{
+    text-align: center;
+    width: 100%;
+    margin: 3px 10px 0px 0px;
+}
+.clear{
+    width: 75%;
+    margin: 4px 10px 0px 10px;
+    border: none;
+}
+
+/* singleProduct */
+.singleProduct{
+    width: 80%;
+}
+
+/*  */
+.Menu{
+    background-color: rgb(12, 12, 41)!important;
+    color: white;
+    margin-bottom: 5px;
+}
+.shopping{
+    font-size: 20px;
+}
+
+/* link */
+.link{
+    color: white;
+    text-decoration: none;   
+}
+
+/* button */
+
+.danger{
+    background-color: red;
+}
+
+button,.form-submit{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(46, 50, 161);
+    color: white;
+    border: none;
+    transition: 0.5s;
+}
+button:hover,.form-submit:hover{
+    opacity:0.7;
+}
+
+
+
+/* product cart */
+/*  */
+.cart{
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.cart span{
+    margin: 0px 2px;
+}
+.carts{
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.cart2{
+    width: 60%;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.cartCard{
+    padding: 5px 15px;
+    margin: 5px 10px;
+    width: 100%;
+    flex-direction: row;
+}
+.cartCard img{
+    width: 200px;
+}
+
+.cardDetails{
+    height: 100%;
+    margin: 10px 15px;
+    width: 35%;
+    background-color: #08084b;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    padding: 15px;
+    color: white;
+}
+
+/* Footer */
+.footer{
+    width: 100wh;
+    color: white;
+    flex-direction:column;
+}
+.footerTop{
+    padding: 25px 10px 10px 10px;
+    justify-content: space-around;
+    background-color: #08084b;
+    width: 100%;
+}
+.footerTop div p{
+    cursor: pointer;
+}
+.footerBottom{
+    flex-direction:column;
+    padding: 5px;
+    background-color: rgb(12, 12, 41);
+    width: 100%;
+}
+
+.error{
+    height: 90vh;
+    flex-direction: column;
+}
+
+
+@media (max-width:800px) {
+    /* customize */
+    .home{
+        flex-direction: column;
+        height: 80vh;
+    }
+    .home::before{
+        content: "";
+        background: url('./components/1.jpg');
+        height: 85%;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
+    }
+    .contain{
+        flex-direction: column;
+    }
+    .search{
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        margin: 10px;
+    }
+    .singleProduct{
+        width: 100%;
+    }
+
+    .productCard{
+        width: 42%!important;
+    }
+
+    /* product cart */
+    .carts{
+        flex-direction: column;
+        align-items: center;
+        flex-direction:column-reverse;
+    }
+
+    .cart2{
+        width: 90%;
+    }
+
+    .cardDetails{
+        width: 90%;
+    }
+
+    /* footer */
+    .footer h5,.footer h6{
+        font-size: 15px;
+    }
+    .footer p{
+        font-size: 12px;
+    }
+}
